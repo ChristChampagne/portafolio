@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectsCard from "../components/ProjectsCard.astro";
+import data from "../json/projectsData.json";
+---
+
+<Layout title="Christian Rodriguez - Experiencia">
+
+<h1 class="text-center projectsMainTitle mt-5">[Proyectos]</h1>
+{
+    data.map(
+        ({
+            projectName,
+            description,
+            url,
+        }) => (
+            <ProjectsCard
+            projectName={projectName}
+                description={description}
+                url={url}
+            />
+        ),
+    )
+}
+</Layout>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+    .projectsMainTitle {
+        font-family: "Fira Code", monospace;
+        color: white;
+        font-size: 2rem;
+    }
+</style>

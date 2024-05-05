@@ -1,0 +1,71 @@
+---
+interface Props {
+    projectName: string;
+    description: string;
+    url: string;
+}
+
+const { projectName,description,url} =
+    Astro.props;
+---
+<div class="container projectContainer ">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+            <div class="projectCard">
+                <h1 class="projectCardTitle text-center">{projectName}</h1>
+                <div class="projectBody">
+                    <p class="description">
+                        {description}
+                    </p>
+                    <div class="w-100 text-center mb-5">
+                        <a href={url}><button class="experienceBtn">Visitar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+    .projectContainer{
+        margin-top:2rem;
+        margin-bottom:2rem;
+    }
+    .projectCard {
+        font-family: "Fira Code", monospace;
+    }
+
+    .projectCardTitle{
+        font-size:1rem;
+        color: white;
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        font-size:1rem;
+        color: white;
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+    .experienceBtn {
+        padding: 0.5rem;
+        margin-top: 1rem;
+        width: 50%;
+        background-color: white;
+        font-weight: bold;
+        border-radius: 0.6rem;
+        transition: .2s;
+    }
+    .experienceBtn:hover {
+        background-color: #7875ff;
+        color: white;
+    }
+    .experienceImage img {
+        margin-top: 1rem;
+    }
+ 
+
+   
+</style>

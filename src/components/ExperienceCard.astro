@@ -1,0 +1,95 @@
+---
+interface Props {
+    company: string;
+    position: string;
+    location: string;
+    description: string;
+    technologies: string;
+    experienceName:string;
+    url: string;
+}
+
+const { location, company, position, description, technologies, url, experienceName} =
+    Astro.props;
+---
+<div class="container experienceContainer ">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10">
+            <div class="experienceCard">
+                <h1 class="experienceCardTitle">{experienceName}</h1>
+                <div class="experienceBody">
+                    <h1 class="experienceTitle">
+                        <span class="pre-title">Empresa: </span>{company}
+                    </h1>
+                    <h1 class="experienceTitle">
+                        <span class="pre-title">Posición: </span>{position}
+                    </h1>
+                    <h1 class="experienceTitle">
+                        <span class="pre-title">Ubicación: </span>{location}
+                    </h1>
+                    <p class="experienceTitle description">
+                        {description}
+                    </p>
+                    <h1 class="experienceTitle">
+                        <span class="pre-title">Tecnológias:</span>{
+                            technologies
+                        }
+                    </h1>
+                    <div class="w-100">
+                        <a href={url}><button class="experienceBtn">Visitar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+    .experienceCard {
+        font-family: "Fira Code", monospace;
+    }
+
+    .pre-title {
+        color: #7875ff;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    .experienceTitle {
+        color: white;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .experienceCardTitle {
+        color: white;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .description {
+        text-align: justify;
+    }
+    .experienceBtn {
+        padding: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+        background-color: white;
+        font-weight: bold;
+        border-radius: 0.6rem;
+        transition: .2s;
+    }
+    .experienceBtn:hover {
+        background-color: #7875ff;
+        color: white;
+    }
+    .experienceImage img {
+        margin-top: 1rem;
+    }
+    .experienceContainer{
+        margin-top:5rem;
+        margin-bottom:5rem;
+    }
+</style>

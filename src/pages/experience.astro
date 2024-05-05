@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+import data from "../json/experienceData.json";
+---
+
+<Layout title="Christian Rodriguez - Experiencia">
+
+<h1 class="text-center experienceMainTitle mt-5">[Experiencia Profesional]</h1>
+{
+    data.map(
+        ({
+            experienceName,
+            company,
+            position,
+            location,
+            description,
+            technologies,
+            url,
+        }) => (
+            <ExperienceCard
+                experienceName={experienceName}
+                company={company}
+                position={position}
+                location={location}
+                description={description}
+                technologies={technologies}
+                url={url}
+            />
+        ),
+    )
+}
+</Layout>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+    .experienceMainTitle {
+        font-family: "Fira Code", monospace;
+        color: white;
+        font-size: 2rem;
+    }
+</style>

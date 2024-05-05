@@ -1,0 +1,17 @@
+[
+    {
+        "projectName": "Acortador de URLS",
+        "description": "Este proyecto comenzó cuando cursaba los últimos cuatrimestres de mi carrera, estaba intantando descargar distintos archivos necesarios para el proyecto integrador final. me di cuenta de que era muy dificil para mi el poder compartirme información entre diferentes dispositivos.Tomando esto en cuenta, tomé la iniciativa de crear un acortador de links utilizando puramente HTML / CSS y PHP, llevandome a crear la primera versiòn del acortador, posteriormente conocì el framework de PHP llamado Laravel y migrè el proyecto hacìa esa plataforma. Su nombre describe claramente lo que realiza la aplicación :)",
+        "url": "https://shr.rf.gd/"
+    },
+    {
+        "projectName": "Creador de Cartas Musicales Spotify",
+        "description": "Este proyecto tambien surgió en la universidad, este en especial surgió cuando no tenía acceso a spotify premium (Cosa que hasta ahora me doy cuenta que se puede hacer sin tener una cuenta premium) y querìa mostrar lo que sentìa mediante el uso de letras de canciones de mi agrado. Por lo que no tuvè màs opciòn que generarme una pequeña aplicaciòn web que me permitiera hacer lo anterior, cree una versiòn donde habìa un formulario y las cartas eran muy diferentes, nada parecido a las de spotify, pero de igual forma er la misma ideea.",
+        "url": "https://personal-projects.000.pe/spotify-post"
+    },
+    {
+        "projectName": "Sistema de Administración de Hoteles",
+        "description": "Este es un proyecto que surgió despues de haber realizado un pequeño trabajo para una empresa de administraciones de hoteles, tuve la curiosidad de conocer la estructura interna de un hotel y de sus sistemas, por lo que estó fue la iniciativa para generar este proeycto. El proyecto en sí cuenta con roles (administradores, cocineros, y empleados de mostrador) donde cada uno de ellos tiene acceso a una sección del panel de administración donde existe el modulo de cocina, room service, check in, check out asì como un modulo de estadisticas y control de usuarios.",
+        "url": "Desarrollador Fullstack"
+    }
+]

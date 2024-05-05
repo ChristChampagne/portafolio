@@ -1,0 +1,29 @@
+[
+    {
+        "experienceName": "Rediseño y Sistema Administrador de Contenido",
+        "company": "Refacciones Victorino",
+        "position": "Desarrollador Freelance",
+        "location": "Durango, Dgo. México.",
+        "description": "Desempeñé un papel clave en la dirección del proceso completo de rediseño, maquetación y reestructuración de la página de inicio de Refacciones Victorino. Además, desarrollé un sistema de gestión de contenidos altamente interactivo diseñado específicamente para satisfacer las necesidades únicas de la empresa. Este sistema no sólo mejoró la estética y la funcionalidad del sitio web, sino que también permitió una gestión de contenidos más eficaz y dinámica. Como resultado de estas iniciativas, la empresa experimentó un aumento significativo de la interacción de los usuarios y una notable mejora de su presencia en línea.",
+        "technologies": "Laravel 11, Blade, PHP, Javascript, MySql",
+        "url": "https://www.refavictorino.com.mx"
+    },
+    {
+        "experienceName": "Sitio Web Publicitario y Sistema de Citas",
+        "company": "Toltekiani Tattoos",
+        "position": "Desarrollador Freelance",
+        "location": "Atlanta, GA. USA. (Remoto)",
+        "description": "Dirigí el desarrollo de un sistema dinámico de publicidad integrado a la perfección con una plataforma de gestión de citas para Toltekiani Tattoos. Esta solución multifacética fue diseñada para agilizar el flujo de información y ofrecer un conjunto de herramientas de programación versátiles. Aprovechando PHP dentro de una arquitectura MVC, mejoramos la funcionalidad con la integración de marcos de diseño de vanguardia. Esta estrategia innovadora reforzó significativamente la eficacia operativa de la empresa y elevó su capacidad de gestión de la información.",
+        "technologies": "PHP, Javascript, MySql",
+        "url": ""
+    },
+    {
+        "experienceName": "Sistema de Citas & Gestor de Contraseñas",
+        "company": "Siempre Services",
+        "position": "Desarrollador Fullstack",
+        "location": "Atlanta, GA. USA. (Remoto)",
+        "description": "Orquesté el diseño y la implantación de un sistema avanzado de gestión de citas y credenciales para Siempre Services, una destacada empresa estadounidense especializada en la gestión de impuestos y remesas. También asumí la responsabilidad del mantenimiento y la seguridad tanto de los sistemas operativos como del sistema local de la empresa.",
+        "technologies": "ElectronJS, Javascript, HTML/CSS, MySql",
+        "url": "https://www.refavictorino.com.mx"
+    }
+]
