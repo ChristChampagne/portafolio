@@ -5,14 +5,22 @@ interface Props {
     location: string;
     description: string;
     technologies: string;
-    experienceName:string;
-    url: string;
+    experienceName: string;
+    url?: string;
 }
 
-const { location, company, position, description, technologies, url, experienceName} =
-    Astro.props;
+const {
+    location,
+    company,
+    position,
+    description,
+    technologies,
+    url,
+    experienceName,
+} = Astro.props;
 ---
-<div class="container experienceContainer ">
+
+<div class="container experienceContainer">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10">
             <div class="experienceCard">
@@ -35,9 +43,26 @@ const { location, company, position, description, technologies, url, experienceN
                             technologies
                         }
                     </h1>
-                    <div class="w-100">
-                        <a href={url}><button class="experienceBtn">Visitar</button></a>
-                    </div>
+
+                    {
+                        url ? ( // Verificar si la URL existe
+                            <div class="w-100 text-center mb-5">
+                                <a href={url}>
+                                    <button class="experienceBtn">
+                                        Visitar
+                                    </button>
+                                </a>
+                            </div>
+                        ) : (
+                            <div class="w-100 text-center mb-5">
+                                <a href={url}>
+                                    <button class="experienceBtn" disabled>
+                                        No Disponible
+                                    </button>
+                                </a>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>
@@ -79,7 +104,7 @@ const { location, company, position, description, technologies, url, experienceN
         background-color: white;
         font-weight: bold;
         border-radius: 0.6rem;
-        transition: .2s;
+        transition: 0.2s;
     }
     .experienceBtn:hover {
         background-color: #7875ff;
@@ -88,8 +113,8 @@ const { location, company, position, description, technologies, url, experienceN
     .experienceImage img {
         margin-top: 1rem;
     }
-    .experienceContainer{
-        margin-top:5rem;
-        margin-bottom:5rem;
+    .experienceContainer {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 </style>

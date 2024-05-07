@@ -1,6 +1,6 @@
 [
     {
-        "experienceName": "Rediseño y Sistema Administrador de Contenido",
+        "experienceName": "Rediseño y Sistema Administrador de Contenido (2 Meses)",
         "company": "Refacciones Victorino",
         "position": "Desarrollador Freelance",
         "location": "Durango, Dgo. México.",
@@ -9,7 +9,7 @@
         "url": "https://www.refavictorino.com.mx"
     },
     {
-        "experienceName": "Sitio Web Publicitario y Sistema de Citas",
+        "experienceName": "Sitio Web Publicitario y Sistema de Citas (2 Meses)",
         "company": "Toltekiani Tattoos",
         "position": "Desarrollador Freelance",
         "location": "Atlanta, GA. USA. (Remoto)",
@@ -18,12 +18,21 @@
         "url": ""
     },
     {
-        "experienceName": "Sistema de Citas & Gestor de Contraseñas",
+        "experienceName": "Administrador de Sistemas - Sistema de Citas & Gestor de Contraseñas (1 Año)",
         "company": "Siempre Services",
         "position": "Desarrollador Fullstack",
         "location": "Atlanta, GA. USA. (Remoto)",
         "description": "Orquesté el diseño y la implantación de un sistema avanzado de gestión de citas y credenciales para Siempre Services, una destacada empresa estadounidense especializada en la gestión de impuestos y remesas. También asumí la responsabilidad del mantenimiento y la seguridad tanto de los sistemas operativos como del sistema local de la empresa.",
         "technologies": "ElectronJS, Javascript, HTML/CSS, MySql",
-        "url": "https://www.refavictorino.com.mx"
+        "url": ""
+    },
+    {
+        "experienceName": "Catálogo Interno de Refacciones Automotrices (1 Año 2 Meses)",
+        "company": "Refacciones Victorino",
+        "position": "Desarrollador Fullstack",
+        "location": "Durango, Dgo. México.",
+        "description": "He mejorado significativamente el proceso de búsqueda de piezas de automóviles mediante la implementación de un sistema de administración robusto y eficiente de busqueda de piezas automotrices dentro de la red local de la empresa. Esta solución no solo permite a la empresa brindar un servicio al cliente superior, sino que también optimiza la eficiencia operativa en las actividades diarias.",
+        "technologies": "PHP, Javascript, HTML/CSS, PostgreSQL",
+        "url": ""
     }
 ]

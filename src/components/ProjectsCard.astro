@@ -2,7 +2,7 @@
 interface Props {
     projectName: string;
     description: string;
-    url: string;
+    url?: string;
 }
 
 const { projectName,description,url} =
@@ -17,9 +17,28 @@ const { projectName,description,url} =
                     <p class="description">
                         {description}
                     </p>
-                    <div class="w-100 text-center mb-5">
-                        <a href={url}><button class="experienceBtn">Visitar</button></a>
-                    </div>
+
+                    {
+                        url ? ( // Verificar si la URL existe
+                            <div class="w-100 text-center mb-5">
+                                <a href={url}>
+                                    <button class="experienceBtn">
+                                        Visitar
+                                    </button>
+                                </a>
+                            </div>
+                        ) : (
+                            <div class="w-100 text-center mb-5">
+                                <a href={url}>
+                                    <button class="experienceBtn" disabled>
+                                        No Disponible
+                                    </button>
+                                </a>
+                            </div>
+                        )
+                    }
+
+                    
                 </div>
             </div>
         </div>

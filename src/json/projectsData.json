@@ -12,6 +12,6 @@
     {
         "projectName": "Sistema de Administración de Hoteles",
         "description": "Este es un proyecto que surgió despues de haber realizado un pequeño trabajo para una empresa de administraciones de hoteles, tuve la curiosidad de conocer la estructura interna de un hotel y de sus sistemas, por lo que estó fue la iniciativa para generar este proeycto. El proyecto en sí cuenta con roles (administradores, cocineros, y empleados de mostrador) donde cada uno de ellos tiene acceso a una sección del panel de administración donde existe el modulo de cocina, room service, check in, check out asì como un modulo de estadisticas y control de usuarios.",
-        "url": "Desarrollador Fullstack"
+        "url": ""
     }
 ]
