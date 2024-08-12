@@ -61,167 +61,301 @@
             align-items: center;
         }
 
-        .switch {
-            position: relative;
-            display: inline-block;
+        .toggle {
+            background: #eee;
             width: 60px;
-            height: 34px;
+            height: 30px;
+            padding: 3px;
+            border-radius: 30px;
+            margin: 10px;
         }
 
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
+        label {
+            width: 24px;
+            height: 24px;
+            background: rgb(44, 44, 44);
+            display: flex;
             cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked+.slider {
-            background-color: #2196F3;
-        }
-
-        input:focus+.slider {
-            box-shadow: 0 0 1px #2196F3;
-        }
-
-        input:checked+.slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-
-        /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
             border-radius: 50%;
+            transition: all 0.25s ease 0s;
+        }
+
+        input {
+            display: none;
+        }
+
+
+
+        input:checked+label {
+            margin-left: 30px;
+            background: rgb(44, 44, 44);
+
+        }
+
+        label {
+            position: relative;
+            z-index: 1;
+        }
+
+        .en {
+            display: none;
         }
     </style>
+
+
+    <script>
+
+        function displayLanguage() {
+            let lang = document.getElementById('btn');
+            let es = document.getElementById('es');
+            let en = document.getElementById('en');
+            if (lang.checked) {
+                document.title = "Engr. Christian Rodriguez | Portfolio"
+                es.style.display = 'none';
+                en.style.display = 'block';
+            } else {
+                document.title = "Ing. Christian Rodriguez | Portafolio"
+                en.style.display = 'none';
+                es.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <div id="container" class="p-10 items-center">
-        <section id="main" class="main h-screen">
-            <h1 class="text-center">Ing. Christian Rodriguez</h1>
-            <h3>Desarrollador Web / Backend / Frontend</h3>
-        </section>
 
+    <nav>
+        <div class="lang flex justify-center items-center ml-3">
 
-
-        <section id="experience" class=" h-screen flex-col items-left justify-left">
-
-            <h3 class="text-center">Experiencia</h3>
-            <div class="experience-card">
-                <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
-                        href="https://hotelesgreenwood.com/" target="_blank">Empresa: Hoteles Greenwood <i
-                            class="las la-external-link-alt"></i> </a></h4>
-                <h4>Posición: Freelance</h4>
-                <h4>Ubicación: Durango, Dgo. México</h4>
-                <h4>Tecnológias: HTML, CSS, JavaScript, Tailwind</h4>
-                <p>Desarrollé y diseñé una landing page optimizada para Greenwood Hoteles,
-                    ubicados en Coahuila, México. Mediante el uso del framework Tailwind CSS para lograr un diseño
-                    moderno,
-                    responsivo y altamente eficiente, alineado con la identidad visual de la empresa, asegurando una
-                    experiencia de usuario fluida en todos los dispositivos.
-
-                </p>
+            <h4>es</h4>
+            <div class="toggle">
+                <input type="checkbox" id="btn" onchange="displayLanguage()">
+                <label for="btn"></label>
             </div>
+            <h4>en</h4>
 
-            <div class="experience-card">
-                <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
-                        href="https://operadoradelta.com/" target="_blank">Empresa: Operadora Delta <i
-                            class="las la-external-link-alt"></i> </a></h4>
-                <h4>Posición: Freelance</h4>
-                <h4>Ubicación: Durango, Dgo. México</h4>
-                <h4>Tecnológias: HTML, CSS, JavaScript, Tailwind</h4>
-                <p>Desarrollé y diseñé una landing page para Operadora Delta, una empresa duranguense especializada en
-                    la administración y marketing de cadenas hoteleras. Implementé el framework Bootstrap para lograr un
-                    diseño preciso, limpio y completamente responsivo, garantizando una experiencia de usuario
-                    consistente en cualquier dispositivo.
-                </p>
-            </div>
-
-            <div class="experience-card">
-                <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
-                        href="https://www.refavictorino.com.mx/" target="_blank">Empresa: Refacciones Victorino <i
-                            class="las la-external-link-alt"></i> </a></h4>
-                <h4>Posición: Freelance</h4>
-                <h4>Ubicación: Durango, Dgo. México</h4>
-                <h4>Tecnológias: Laravel 11, Blade, PHP, Javascript, MySql</h4>
-                <p>Desempeñé un papel clave en la dirección del proceso completo de rediseño, maquetación y
-                    reestructuración de la página de inicio de Refacciones Victorino. Además, desarrollé un sistema de
-                    gestión de contenidos altamente interactivo diseñado específicamente para satisfacer las necesidades
-                    únicas de la empresa. Este sistema no sólo mejoró la estética y la funcionalidad del sitio web, sino
-                    que también permitió una gestión de contenidos más eficaz y dinámica. Como resultado de estas
-                    iniciativas, la empresa experimentó un aumento significativo de la interacción de los usuarios y una
-                    notable mejora de su presencia en línea.</p>
-            </div>
-
-
-            <div class="experience-card">
-                <h4>Empresa: Refacciones Victorino</h4>
-                <h4>Posición: Fullstack</h4>
-                <h4>Ubicación: Durango, Dgo. México</h4>
-                <h4>Tecnológias: Laravel 10, Blade, PHP, Javascript, MySql</h4>
-                <p>Desarrollé un sistema avanzado para la búsqueda de piezas automotrices, que optimiza las consultas a
-                    bases de datos y reduce significativamente el tiempo de búsqueda. Además, implementé una
-                    funcionalidad para la creación de nuevas piezas, basada en el año, modelo y marca de los vehículos
-                    correspondientes.</p>
-            </div>
-
-            <div class="experience-card">
-                <h4>Empresa: Siempre Services</h4>
-                <h4>Posición: Fullstack</h4>
-                <h4>Ubicación: Remoto, Atlanta, GA. USA.</h4>
-                <h4>Tecnológias: PHP, ElectronJS, Javascript, MySql</h4>
-                <p>Diseñé e implementé de un sistema avanzado de gestión de citas y credenciales para Siempre Services,
-                    una destacada empresa estadounidense especializada en la gestión de impuestos y remesas. También
-                    asumí la responsabilidad del mantenimiento y la seguridad tanto de los sistemas operativos como del
-                    sistema local de la empresa.</p>
-            </div>
-
-
-            <h3 class="text-center mt-10 mb-20">Stack</h3>
-
-
-            <h4 class="text-center pb-32">Python, JavaScript, PHP, Laravel, MySQL, MongoDB, CSS, HTML, WordPress,
-                Microsoft
-                Office Suite, Power BI, PostgreSQL, Git, Bootstrap CSS, Tailwinds CSS, React</h4>
+        </div>
+    </nav>
 
 
 
-            <h3 class="text-center mt-10 mb-20">Contacto</h3>
+    <div id="en" class="en transition-all ease-in-out duration-500">
+        <div id="container" class="p-10 items-center">
+            <section id="main" class="main h-screen">
+                <h1 class="text-center">Engr. Christian Rodriguez</h1>
+                <h3>Web Developer / Backend / Frontend</h3>
+            </section>
 
 
-            <h4 class="text-center pb-32 hover:text-blue-700 transition-all duration-200 ease-in-out"><a
-                    href="mailto:contact_christianr@protonmail.me">contact_christianr@proton.me <i
-                        class="las la-external-link-alt"></i></a></h4>
 
-        </section>
+            <section id="experience" class=" h-screen flex-col items-left justify-left">
+
+                <h3 class="text-center">Experience</h3>
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://hotelesgreenwood.com/" target="_blank">Company: Hoteles Greenwood <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Job position: Freelance</h4>
+                    <h4>Location: Durango, Dgo. México</h4>
+                    <h4>Technologies: HTML, CSS, JavaScript, Tailwind</h4>
+                    <p> I developed and designed an optimised landing page for Greenwood Hotels, located in Coahuila,
+                        Mexico. Using the Tailwind CSS framework to achieve a modern, responsive and highly efficient
+                        design, aligned with the visual identity of the company, ensuring a smooth user experience on
+                        all devices.
+
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://operadoradelta.com/" target="_blank">Company: Operadora Delta <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Job position: Freelance</h4>
+                    <h4>Location: Durango, Dgo. México</h4>
+                    <h4>Technologies: HTML, CSS, JavaScript, Bootstrap</h4>
+                    <p>
+                        I developed and designed a landing page for Operadora Delta, a company from Durango that
+                        specialises in at management and marketing of hotel chains. I implemented the Bootstrap
+                        framework to achieve a design, clean and fully responsive, ensuring a consistent user experience
+                        on any device. experience on any device.
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://www.refavictorino.com.mx/" target="_blank">Company: Refacciones Victorino <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Job position: Freelance</h4>
+                    <h4>Location: Durango, Dgo. México</h4>
+                    <h4>Technologies: Laravel 11, Blade, PHP, Javascript, MySql</h4>
+                    <p>
+                        I developed and led the entire redesign, layout and restructuring process of the
+                        Refacciones Victorino homepage. In addition, I developed a highly interactive content management
+                        system designed specifically to meet the company's unique needs. This system not only improved
+                        the aesthetics and functionality of the website, but also allowed for more effective and dynamic
+                        content management. As a result of these initiatives, the company experienced a significant
+                        increase in user interaction and a marked improvement in its online presence.
+                    </p>
+                </div>
+
+
+                <div class="experience-card">
+                    <h4>Company: Refacciones Victorino</h4>
+                    <h4>Job position: Fullstack</h4>
+                    <h4>Location: Durango, Dgo. México</h4>
+                    <h4>Technologies: Laravel 10, Blade, PHP, Javascript, MySql</h4>
+                    <p>
+                        I developed an advanced system for automotive parts search, which optimises database queries and
+                        significantly reduces search time. In addition, I implemented a functionality for the creation
+                        of new parts, based on the year, model and make of the corresponding vehicles.
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                    <h4>Company: Siempre Services</h4>
+                    <h4>position: Fullstack</h4>
+                    <h4>Location: Remote, Atlanta, GA. USA.</h4>
+                    <h4>Technologies: PHP, ElectronJS, Javascript, MySql</h4>
+                    <p>
+                        I designed and implemented an advanced appointment and credential management system for Siempre
+                        Services, a leading US company specialising in tax and remittance management. I also assumed
+                        responsibility for the maintenance and security of both the company's operating systems and
+                        on-premise system.
+                    </p>
+                </div>
+
+
+                <h3 class="text-center mt-10 mb-20">Stack</h3>
+
+
+                <h4 class="text-center pb-32">Python, JavaScript, PHP, Laravel, MySQL, MongoDB, CSS, HTML, WordPress,
+                    Microsoft
+                    Office Suite, Power BI, PostgreSQL, Git, Bootstrap CSS, Tailwinds CSS, React</h4>
+
+
+
+                <h3 class="text-center mt-10 mb-20">Contact Me</h3>
+
+
+                <h4 class="text-center pb-32 hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                        href="mailto:contact_christianr@protonmail.me">contact_christianr@proton.me <i
+                            class="las la-external-link-alt"></i></a></h4>
+
+            </section>
+        </div>
+    </div>
+
+
+    <div id="es" class="es transition-all ease-in-out duration-500">
+        <div id="container" class="p-10 items-center">
+            <section id="main" class="main h-screen">
+                <h1 class="text-center">Ing. Christian Rodriguez</h1>
+                <h3>Desarrollador Web / Backend / Frontend</h3>
+            </section>
+
+
+
+            <section id="experience" class=" h-screen flex-col items-left justify-left">
+
+                <h3 class="text-center">Experiencia</h3>
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://hotelesgreenwood.com/" target="_blank">Empresa: Hoteles Greenwood <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Posición: Freelance</h4>
+                    <h4>Ubicación: Durango, Dgo. México</h4>
+                    <h4>Tecnológias: HTML, CSS, JavaScript, Tailwind</h4>
+                    <p>Desarrollé y diseñé una landing page optimizada para Greenwood Hoteles,
+                        ubicados en Coahuila, México. Mediante el uso del framework Tailwind CSS para lograr un diseño
+                        moderno,
+                        responsivo y altamente eficiente, alineado con la identidad visual de la empresa, asegurando una
+                        experiencia de usuario fluida en todos los dispositivos.
+
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://operadoradelta.com/" target="_blank">Empresa: Operadora Delta <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Posición: Freelance</h4>
+                    <h4>Ubicación: Durango, Dgo. México</h4>
+                    <h4>Tecnológias: HTML, CSS, JavaScript, Bootstrap</h4>
+                    <p>Desarrollé y diseñé una landing page para Operadora Delta, una empresa duranguense especializada
+                        en
+                        la administración y marketing de cadenas hoteleras. Implementé el framework Bootstrap para
+                        lograr un
+                        diseño preciso, limpio y completamente responsivo, garantizando una experiencia de usuario
+                        consistente en cualquier dispositivo.
+                    </p>
+                </div>
+
+                <div class="experience-card">
+                    <h4 class="hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                            href="https://www.refavictorino.com.mx/" target="_blank">Empresa: Refacciones Victorino <i
+                                class="las la-external-link-alt"></i> </a></h4>
+                    <h4>Posición: Freelance</h4>
+                    <h4>Ubicación: Durango, Dgo. México</h4>
+                    <h4>Tecnológias: Laravel 11, Blade, PHP, Javascript, MySql</h4>
+                    <p>Desempeñé un papel clave en la dirección del proceso completo de rediseño, maquetación y
+                        reestructuración de la página de inicio de Refacciones Victorino. Además, desarrollé un sistema
+                        de
+                        gestión de contenidos altamente interactivo diseñado específicamente para satisfacer las
+                        necesidades
+                        únicas de la empresa. Este sistema no sólo mejoró la estética y la funcionalidad del sitio web,
+                        sino
+                        que también permitió una gestión de contenidos más eficaz y dinámica. Como resultado de estas
+                        iniciativas, la empresa experimentó un aumento significativo de la interacción de los usuarios y
+                        una
+                        notable mejora de su presencia en línea.</p>
+                </div>
+
+
+                <div class="experience-card">
+                    <h4>Empresa: Refacciones Victorino</h4>
+                    <h4>Posición: Fullstack</h4>
+                    <h4>Ubicación: Durango, Dgo. México</h4>
+                    <h4>Tecnológias: Laravel 10, Blade, PHP, Javascript, MySql</h4>
+                    <p>Desarrollé un sistema avanzado para la búsqueda de piezas automotrices, que optimiza las
+                        consultas a
+                        bases de datos y reduce significativamente el tiempo de búsqueda. Además, implementé una
+                        funcionalidad para la creación de nuevas piezas, basada en el año, modelo y marca de los
+                        vehículos
+                        correspondientes.</p>
+                </div>
+
+                <div class="experience-card">
+                    <h4>Empresa: Siempre Services</h4>
+                    <h4>Posición: Fullstack</h4>
+                    <h4>Ubicación: Remoto, Atlanta, GA. USA.</h4>
+                    <h4>Tecnológias: PHP, ElectronJS, Javascript, MySql</h4>
+                    <p>Diseñé e implementé de un sistema avanzado de gestión de citas y credenciales para Siempre
+                        Services,
+                        una destacada empresa estadounidense especializada en la gestión de impuestos y remesas. También
+                        asumí la responsabilidad del mantenimiento y la seguridad tanto de los sistemas operativos como
+                        del
+                        sistema local de la empresa.</p>
+                </div>
+
+
+                <h3 class="text-center mt-10 mb-20">Stack</h3>
+
+
+                <h4 class="text-center pb-32">Python, JavaScript, PHP, Laravel, MySQL, MongoDB, CSS, HTML, WordPress,
+                    Microsoft
+                    Office Suite, Power BI, PostgreSQL, Git, Bootstrap CSS, Tailwinds CSS, React</h4>
+
+
+
+                <h3 class="text-center mt-10 mb-20">Contacto</h3>
+
+
+                <h4 class="text-center pb-32 hover:text-blue-700 transition-all duration-200 ease-in-out"><a
+                        href="mailto:contact_christianr@protonmail.me">contact_christianr@proton.me <i
+                            class="las la-external-link-alt"></i></a></h4>
+
+            </section>
+        </div>
     </div>
 </body>
 
